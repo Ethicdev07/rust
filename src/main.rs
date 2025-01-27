@@ -1,11 +1,11 @@
 fn main() {
-    let x: i32 = 5; //imutabble variable
+    let x: i32 = 5; //imutable variable
     let _y: i32; //unused varible _y
 
     assert_eq!(x, 5);
     println!("success");
 
-    let mut x = 5; //mutabble variable
+    let mut x = 5; //mutable variable
     x += 1; //x = x +1
 
     assert_eq!(x, 6);
@@ -51,6 +51,9 @@ fn main() {
 
 
     define_x(); //invoking the define_x function cause the starting point of every rust program is the main function.
+
+
+    define_name();
 }
 
 
@@ -58,4 +61,10 @@ fn main() {
 fn define_x() {
     let x: &str = "hello";
     println!("{},world", x) //returns hello world cause we provided x the the print line macro and we are appending to it comma world
+}
+fn define_name(){
+    let name: &str = "John";
+
+    assert_eq!(name, "John");
+    println!("successfully defined name: {}", name)
 }
